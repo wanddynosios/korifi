@@ -7,6 +7,8 @@ global:
   containerRegistrySecret: image-registry-credentials
   eksContainerRegistryRoleARN: ""
   containerRegistryCACertSecret:
+  jobs:
+    image: alpine/k8s:1.25.2
 
 adminUserName:
 
@@ -75,10 +77,6 @@ controllers:
   extraVCAPApplicationValues: {}
   maxRetainedPackagesPerApp: 5
   maxRetainedBuildsPerApp: 5
-
-  postInstall:
-    createAppDomainJob:
-      image: alpine/k8s:1.25.2
 
 kpackImageBuilder:
   include: true

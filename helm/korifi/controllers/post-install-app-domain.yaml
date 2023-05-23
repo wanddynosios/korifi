@@ -28,7 +28,7 @@ spec:
       {{- include "korifi.podSecurityContext" . | indent 6 }}
       containers:
       - name: post-install-create-app-domain
-        image: {{ .Values.controllers.postInstall.createAppDomainJob.image }}
+        image: {{ .Values.global.job.image }}
         securityContext:
           allowPrivilegeEscalation: false
           runAsNonRoot: true
