@@ -80,6 +80,9 @@ controllers:
   maxRetainedPackagesPerApp: 5
   maxRetainedBuildsPerApp: 5
 
+  webhook:
+    port: 9443
+
 kpackImageBuilder:
   include: true
   replicas: 1
