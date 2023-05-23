@@ -55,6 +55,8 @@ api:
 controllers:
   image: cloudfoundry/korifi-controllers:latest
 
+  hostNetwork: false
+
   replicas: 1
   resources:
     limits:
