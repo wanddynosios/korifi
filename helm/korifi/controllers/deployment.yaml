@@ -21,9 +21,6 @@ spec:
       labels:
         app: korifi-controllers
     spec:
-      {{- if .Values.controllers.hostNetwork }}
-      hostNetwork: true
-      {{- end }}
       containers:
       - name: manager
         env:
@@ -88,3 +85,6 @@ spec:
       - configMap:
           name: korifi-controllers-config
         name: korifi-controllers-config
+      {{- if .Values.controllers.hostNetwork }}
+      hostNetwork: true
+      {{- end }}

@@ -55,8 +55,6 @@ api:
 controllers:
   image: cloudfoundry/korifi-controllers:latest
 
-  hostNetwork: false
-
   replicas: 1
   resources:
     limits:
@@ -80,6 +78,7 @@ controllers:
   maxRetainedPackagesPerApp: 5
   maxRetainedBuildsPerApp: 5
 
+  hostNetwork: false
   webhook:
     port: 9443
 
